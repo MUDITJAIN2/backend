@@ -7,4 +7,4 @@ app.use("/apii",(req,res,next) =>
     res.send("mudit");
 });
 
-app.listen(5000);
+app.listen(5050);
