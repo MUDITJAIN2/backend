@@ -1,10 +1,13 @@
 import  express from "express";
-
+import mongoose from "mongoose";
 const app = express();
 
-app.use("/apii",(req,res,next) => 
-{
-    res.send("mudit");
-});
+mongoose
+.connect(
+    "mongodb+srv:muditj214:fLJoURJiWTVoUA6n@cluster0.ymhxrjs.mongodb.net/Blog?retryWrites=true&w=majority"
+)
+.then(()=>app.listen(5050))
+.then(()=>console.log("connected to database and listening to localhost on port 5050")
+)
+.catch((err)=>console.log(err));
 
-app.listen(5050);
